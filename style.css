@@ -1,0 +1,177 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+
+:root {
+  --pink: #d89aff;
+  --green: #C9C769;
+  --brown: #260c0c;
+  --yellow: #ffe4a7;
+}
+
+body {
+  background-color: var(--brown);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  padding: 24px;
+  padding-bottom: 36px;
+}
+
+a {
+  color: var(--green);
+  font-weight: bold;
+  &:hover {
+     color: white;
+  }
+}
+
+section {
+  max-width: 1050px;
+  margin: 50px auto 0 auto;
+}
+
+h1 {
+  font-family: "Jacquard 12", serif;
+  font-size: 60px;
+  font-weight: normal;
+  color: var(--green);
+  margin-bottom: 16px;
+}
+
+h2 {
+  font-family: Verdana, sans-serif, system-ui;
+  font-size: 28px;
+  color: var(--pink)
+}
+
+blockquote {
+  border-left: 5px solid var(--pink);
+  padding-left: 16px;
+}
+
+code {
+  color: var(--pink);
+  font-size: 16px;
+}
+
+p, li {
+  line-height: 1.5;
+}
+
+strong {
+  color: var(--pink);
+}
+
+.yarndings-12-regular {
+  font-family: "Yarndings 12", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.box {
+  padding: 12px;
+  border: 2px solid var(--pink);
+  max-width: 33%;
+}
+
+.button {
+ display: block;
+  width: max-content;
+  text-align: center;
+  margin: 0 auto;
+  padding: 12px 18px;
+  border-radius: 12px;
+  text-decoration: none;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.big {
+  font-size: 32px;
+  text-decoration: underline;
+}
+
+.next:after {
+    content: '⇢';
+  }
+
+.prev:before {
+    content: '⇠';
+  }
+
+.button.action {
+  color: var(--brown);
+  background-color: var(--green);
+}
+
+.prev-next {
+  display: flex;
+  justify-content: space-between;
+}
+
+.callout {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  color: var(--brown);
+  width: 80%;
+  margin: 32px auto;
+  gap: 12px;
+}
+
+.callout::before {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  line-height: 1;
+  flex-basis: 100px;
+  height: 100px;
+  border-radius: 999px;
+  
+}
+
+.callout .content {
+  max-width: 80%;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.callout .content p {
+  margin: 0;
+  font-weight: bold;
+}
+
+/* --------- Callout: Note --------- */
+
+.callout.note::before {
+  content: '✐';
+  background-color: var(--pink);
+}
+
+.callout.note .content {
+  background-color: var(--pink);
+}
+
+/* --------- Callout: Warning --------- */
+
+.callout.warning::before {
+  content: '⚠';
+  background-color: var(--yellow);
+}
+
+.callout.warning .content {
+  background-color: var(--yellow);
+}
