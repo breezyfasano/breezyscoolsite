@@ -144,6 +144,7 @@ th {
 .text.big {
   color: var(--green);
   text-decoration: none;
+  text-align: center;
 }
 
 .next:after {
