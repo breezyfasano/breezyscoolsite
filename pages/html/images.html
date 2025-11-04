@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Using Images in HTML</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jacquard+12&family=Pixelify+Sans:wght@400..700&family=Yarndings+12&display=swap"
+      rel="stylesheet" />
+    <link href="../../assets/prism/prism.css" rel="stylesheet" type="text/css" media="all" />
+  </head>
+  <body>
+    <a href="/">home</a>
+    <section>
+      <h1>Using Images</h1>
+      <div id="toc"></div>
+      <h2>Using the img Tag</h2>
+      <p>The bread and butter of any good site. The image. Basic usage is as follows:</p>
+
+      <img src="/assets/html/apple-car.jpg" width="300" />
+
+      <p>Wow. Isn't that beautiful?</p>
+
+      <p>This is the code I used to get this lil guy here.</p>
+
+      <pre><code class="language-html">
+&lt;img src=&quot;/assets/html/apple-car.jpg&quot; width=&quot;300&quot; /&gt;
+      </code></pre>
+
+      <p>
+        Notice the width attribute. It's set to 300, as in
+        <strong>pixels</strong>
+        . Pixels are the basic unit of the web. Everything is measured in pixels at the end of the day! I set this
+        picture to be 300 pixels wide with this attribute, and it automatically scales, which is nice.
+      </p>
+      <p>Here's what it would look like if I didn't include that width attribute.</p>
+
+      <img src="/assets/html/apple-car.jpg" />
+
+      <p>
+        He's pretty dang big. That's because the native resolution (actual width and height size of the image file) is
+        817 x 850 pixels. I made it a bit smaller using that attribute.
+      </p>
+
+      <img src="/assets/html/apple-car.jpg" width="300" height="100" />
+
+      <p>
+        Now, if I add a
+        <code>height</code>
+        attribute along with the width, it will warp him and make him squished. If you want to maintain the proportions
+        (called the
+        <strong>aspect ratio</strong>
+        ) only include one of these attributes.
+      </p>
+    </section>
+    <section>
+      <h2>Okay that's great, but how do I choose my own picture and get it on my site?</h2>
+      <p>Great question!</p>
+      <p>There are a lot of ways you can link to images on your site. But the best way is to upload your own!</p>
+
+      <p class="text big">Let's get into the code of this page and I'll show you an example.</p>
+    </section>
+
+    <section class="prev-next">
+      <a href="/pages/intro/text.html" id="prev-page" class="button big prev">prev page</a>
+      <!-- <a href="/pages/html/images.html" id="next-page" class="button big next">next page</a> -->
+    </section>
+  </body>
+  <script src="../../assets/prism/prism.js" type="text/javascript" defer></script>
+  <script type="text/javascript">
+    function generateTOC() {
+      const container = document.querySelector('#toc');
+      if (!container) return;
+      const allHeadings = document.querySelectorAll('h2');
+      if (allHeadings.length < 2) return;
+      let output = '<b>Table of Contents:</b><ol>';
+      [...allHeadings].forEach((headingEl) => {
+        const title = headingEl.innerHTML;
+        const link =
+          headingEl.getAttribute('id') ||
+          encodeURI(
+            title
+              .replaceAll(' ', '-')
+              .replaceAll('#', '')
+              .replaceAll('&', '')
+              .replaceAll(/<[^>]*>?/gm, '')
+              .replaceAll('--', '-')
+          ).toLowerCase();
+        headingEl.setAttribute('id', link);
+        output += `<li><a href="#${link}">${title}</a></li>`;
+      });
+      container.innerHTML = output + '</ol>';
+    }
+    generateTOC();
+  </script>
+</html>

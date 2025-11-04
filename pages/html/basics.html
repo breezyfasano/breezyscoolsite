@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Basics</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jacquard+12&family=Pixelify+Sans:wght@400..700&family=Yarndings+12&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <a href="/">home</a>
+    <section>
+      <h1>HTML: the Bones</h1>
+
+      <p>
+        HTML stands for
+        <strong>hypertext markup language</strong>
+        . It was originally invented to share academic texts on particle physics over an internet connection, So, it has
+        to be easy for anyone to write and be able to easily format specific types of information into a visual pattern
+        humans are used to. HTML hasn't changed much.
+      </p>
+
+      <p>
+        HTML is like, the skeleton and body of your web page. It's your raw content represented as code, into something
+        the browser can read and understand.
+      </p>
+
+      <h2>Tags, Attributes, wtf??????</h2>
+
+      <div class="image-figure">
+        <img src="/assets/html/opening-tag.png" />
+
+        <img src="/assets/html/closing-tag.png" />
+
+        <img src="/assets/html/attributes.png" />
+        <p>
+          from
+          <a
+            href="https://sites.math.duke.edu/courses/math_everywhere/assets/techRefs/HTML%20and%20CSS-%20Design%20and%20Build%20Websites_Jon%20Duckett_2011.pdf"
+            target="_blank">
+            Jon Duckett's HTML & CSS book
+          </a>
+        </p>
+      </div>
+
+      <h2>Organizing HTML into Pages on a Website</h2>
+
+      <div class="image-figure">
+        <img src="/assets/head-body.png" />
+        <p>
+          from
+          <a href="https://internetingishard.netlify.app/html-and-css/basic-web-pages" target="_blank">
+            Interneting is Hard
+          </a>
+        </p>
+      </div>
+
+      <p>
+        I like to divide HTML pages into two main ways - the
+        <strong>Head</strong>
+        and the
+        <strong>Body</strong>
+        . Both of these terms have symbollic meanings, but also technical meanings as well. We'll go through the
+        technical meaning in a minute.
+      </p>
+
+      <h2>the Head</h2>
+      <p>
+        The head is the brains of your webpage. It describes information about the page itself, what resources it needs,
+        and other "meta" information.
+      </p>
+      <h3>We use it to:</h3>
+      <ul>
+        <li>
+          <strong>Tell browsers information about the page it is viewing.</strong>
+          These are things like what language it's in, the title of the page, a description of content one can find on
+          that page, and other stuff like that.
+        </li>
+        <li>
+          <strong>Link external CSS.</strong>
+          You would put any
+          <code>link</code>
+          link tags here that tells the browser to pull in any other styles and files you want to include. We'll talk
+          about this later - it's ok if it doesn't make sense for now.
+        </li>
+      </ul>
+
+      <h2>the Body</h2>
+      <p>
+        This is where the magic happens! You define all of your content here. The headings, paragraphs, images, and
+        everything that actually makes up the bulk of your page and what you want users to see.
+      </p>
+
+      <p>Let's take a look at how these two things work together.</p>
+
+      <a href="https://codepen.io/triforcepizza/pen/OPMGZxO" class="button action" target="_blank">Demo: HTML Pages</a>
+    </section>
+    <section class="prev-next">
+      <a href="/pages/intro/anatomy-of-the-web.html" id="prev-page" class="button big prev">prev page</a>
+      <a href="/pages/html/text.html" id="next-page" class="button big next">next page</a>
+    </section>
+  </body>
+</html>

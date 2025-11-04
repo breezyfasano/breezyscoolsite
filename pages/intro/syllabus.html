@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Jacquard+12&family=Pixelify+Sans:wght@400..700&family=Yarndings+12&display=swap"
       rel="stylesheet"
     />
+    <link href="../../assets/prism/prism.css" rel="stylesheet" type="text/css" media="all" />
   </head>
   <body>
     <a href="/">home</a>
@@ -80,6 +81,29 @@
         <li>Prettier</li>
       </ul>
 
+      <h3>Prettier (VSCode Formatter) Settings in your settings.json</h3>
+
+      <pre>
+            <code class="language-json">
+// ---- Prettier default settings ----
+"prettier.printWidth": 120,
+"prettier.htmlWhitespaceSensitivity": "ignore",
+"prettier.proseWrap": "never",
+"prettier.bracketSameLine": true,
+"prettier.singleQuote": true,
+"prettier.trailingComma": "es5",
+"prettier.tabWidth": 2,
+"prettier.semi": true,
+"prettier.arrowParens": "always",
+
+// Optional: ensure Prettier is used as the default formatter
+"editor.defaultFormatter": "esbenp.prettier-vscode",
+
+// Optional: format on save
+"editor.formatOnSave": true
+        </code>
+        </pre>
+
       <h2>Neocities</h2>
       <p>
         Neocities is the platform we'll be using to host our site, follow other
@@ -97,9 +121,10 @@
       <a href="/" id="prev-page" class="button big prev">
         prev page
       </a>
-      <!-- <a href="/pages/intro/why.html" id="next-page" class="button big next">
+      <a href="/pages/intro/why.html" id="next-page" class="button big next">
         next page
-      </a> -->
+      </a>
     </section>
   </body>
+   <script src="../../assets/prism/prism.js" type="text/javascript" defer></script>
 </html>

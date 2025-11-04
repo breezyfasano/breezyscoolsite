@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tools and Resources</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jacquard+12&family=Pixelify+Sans:wght@400..700&family=Yarndings+12&display=swap"
+      rel="stylesheet" />
+    <link href="/assets/prism/prism.css" rel="stylesheet" type="text/css" media="all" />
+  </head>
+  <body>
+    <a href="/">home</a>
+
+    <h1>Tools & Resources</h1>
+    <section>
+      <div id="toc"></div>
+    </section>
+    <section>
+      <h2>HTML & CSS</h2>
+      <ul>
+        <li>
+          <a href="https://htmlforpeople.com/zero-to-internet-your-first-website" target="_blank">HTML For People</a>
+          - If you're confused and don't remember how to start, or need an all around "how the heck do I do this"
+          refresher, this is the resource for you. It mirrors a lot about what we talked about in class, and is a GREAT
+          reference for everyone new to HTML & CSS.
+        </li>
+        <li>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements" target="_blank">
+            MDN HTML Reference
+          </a>
+          - beware of some jargon here, but overall an amazing place to see all HTML elements at your disposal. It's a
+          great reference on what they do and how you can use them. It is organized based on how elements are used.
+        </li>
+        <li>
+          <a href="https://internetingishard.netlify.app/html-and-css/">Interneting is Hard</a>
+          - a really great and linear tutorial on everything you need to know to make your own website! Expand on basic
+          concepts you learned in class.
+        </li>
+        <li>
+          <a
+            href="https://sites.math.duke.edu/courses/math_everywhere/assets/techRefs/HTML%20and%20CSS-%20Design%20and%20Build%20Websites_Jon%20Duckett_2011.pdf"
+            target="_blank">
+            Jon Duckett's HTML & CSS Book
+          </a>
+          - Somewhat outdated now, but not by much. An incredible resource to visually learn HTML & CSS basics.
+        </li>
+        <li>
+          <a href="https://webdesign.tutsplus.com/the-30-css-selectors-you-must-memorize--net-16048t" target="_blank">
+            30 CSS Selectors You Must Memorize
+          </a>
+          - A bit more advanced, but this is the concept that makes you a CSS power user. Selectors get unruly fast, so
+          remember: beware specificity.
+        </li>
+        <li>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties" target="_blank">
+            CSS Properties Reference
+          </a>
+          - All CSS properties available to you. BEWARE - not all of these are supported in every browser!
+        </li>
+        <li>
+          <a href="https://caniuse.com/">caniuse</a>
+          - this website will tell you if the CSS property you are trying to use is supported by all web browsers. If
+          not, it will tell you which browsers do and do not support it.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Organization & Structure</h2>
+
+      <ul>
+        <li>
+          <a href="https://anemptyblissbeyondthisworld.neocities.org/computer_lab/organisation" target="_blank">
+            How to Structure Your Website Files
+          </a>
+          - How to organize your files as your site grows! SUPER important
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Utilities</h2>
+      <ul>
+        <li>
+          <a href="https://wordhtml.com/" target="_blank">WordHTML</a>
+          - Write long bits of text and/or content and have it converted to HTML for you
+        </li>
+        <li>
+          <a href="https://www.photopea.com/">Photopea</a>
+          - Photoshop alternative, right in your browser. It ROCKS.
+        </li>
+        <li>
+          <a href="https://tinypng.com/">Tinypng</a>
+          - Make your images smaller and optimized for the web
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2>Snippets</h2>
+      <h3>Prettier (VSCode Formatter) Settings in your settings.json</h3>
+
+      <pre>
+            <code class="language-json">
+// ---- Prettier default settings ----
+"prettier.printWidth": 120,
+"prettier.htmlWhitespaceSensitivity": "ignore",
+"prettier.proseWrap": "never",
+"prettier.bracketSameLine": true,
+"prettier.singleQuote": true,
+"prettier.trailingComma": "es5",
+"prettier.tabWidth": 2,
+"prettier.semi": true,
+"prettier.arrowParens": "always",
+
+// Optional: ensure Prettier is used as the default formatter
+"editor.defaultFormatter": "esbenp.prettier-vscode",
+
+// Optional: format on save
+"editor.formatOnSave": true
+        </code>
+        </pre>
+
+      <h3>Basic HTML Page Template</h3>
+      <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;the personal web &amp; inspiration&lt;/title&gt;
+    &lt;link href=&quot;/style.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; media=&quot;all&quot;&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;!-- Rest of Your HTML here --&gt;
+    &lt;section&gt;
+      &lt;h1&gt;Page Heading Here&lt;/h1&gt;
+      
+      &lt;/section&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+    </code></pre>
+    </section>
+  </body>
+  <script type="text/javascript">
+    function generateTOC() {
+      const container = document.querySelector('#toc');
+      if (!container) return;
+      const allHeadings = document.querySelectorAll('h2');
+      if (allHeadings.length < 2) return;
+      let output = '<b>Table of Contents:</b><ol>';
+      [...allHeadings].forEach((headingEl) => {
+        const title = headingEl.innerHTML;
+        const link =
+          headingEl.getAttribute('id') ||
+          encodeURI(
+            title
+              .replaceAll(' ', '-')
+              .replaceAll('#', '')
+              .replaceAll('&', '')
+              .replaceAll(/<[^>]*>?/gm, '')
+              .replaceAll('--', '-')
+          ).toLowerCase();
+        headingEl.setAttribute('id', link);
+        output += `<li><a href="#${link}">${title}</a></li>`;
+      });
+      container.innerHTML = output + '</ol>';
+    }
+    generateTOC();
+  </script>
+  <script src="/assets/prism/prism.js" type="text/javascript" defer></script>
+</html>
