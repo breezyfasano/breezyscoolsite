@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Basics</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jacquard+12&family=Pixelify+Sans:wght@400..700&family=Yarndings+12&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <a href="/">home</a>
+    <section>
+      <h1>CSS: Making it Pretty</h1>
+      <div id="toc"></div>
+      <p>
+        Now, my favorite part! CSS. It stands for
+        <strong>Cascading Style Sheets.</strong>
+        It's what we use to add colors, layout, and more to our websites. The technical term is
+        <strong>style</strong>
+        actually. CSS is one of those things that is extremely fun and cool, but depending on what you're doing, can
+        turn extremely complicated fast. But it'll be ok. Let's start slow.
+      </p>
+
+      <h2>Anatomy of a CSS Rule</h2>
+      <div class="image-figure">
+        <img src="/assets/css/css-color-coded.png" />
+        <p>A color-coded CSS diagram. Graphic design is my passion.</p>
+      </div>
+      <div class="terms">
+        <h3>Terms</h3>
+        <ul>
+          <li>
+            <span style="color: #bd09f0; font-weight: bold">the Selector</span>
+            - This is what specifies what element or "thing" will be altered. In this example, we want to apply styles
+            to all paragraph tags.
+          </li>
+          <li>
+            <span style="color: #0202ff; font-weight: bold">the Brackets</span>
+            - these symbols are what tells the browser that we're about to start declaring our rules and when it ends -
+            called syntax.
+          </li>
+          <li>
+            <span style="color: #c10047; font-weight: bold">the Property</span>
+            - this is what determines what we are actually trying to change. Each property in CSS is a specific rule
+            name the browser can recognize. There are SO many. The properties in this example say that we want to change
+            the font size and the color of the selector.
+          </li>
+          <li>
+            <span style="color: #df7f0a; font-weight: bold">the Value</span>
+            - the actual thing we want to change the style to. We are saying we want the font size to be 16px and the
+            color to be the hex code '#bada55', which is a kind of green color.
+          </li>
+        </ul>
+      </div>
+      <div class="callout note">
+        <div class="content">
+          <p><u>What's a hex code?</u></p>
+          <p>
+            A hex code is a way to represent color on the web. Every color has a corresponding hex code that is 6
+            characters long, and you can use these to get as granular with your colors as much as you'd like. You've
+            probably seen this somewhere on the web before, but if not that's ok. We'll talk more about color later.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2>the Box Model</h2>
+      <div class="image-figure">
+        <img src="/assets/css/css-box-model.png" />
+        <p>the box model! margin, border, padding, and content.</p>
+      </div>
+    </section>
+    <section>
+      <h2>the Cascade</h2>
+      <p>
+        It's called
+        <em>Cascading</em>
+        Style Sheets for a reason. I'm going to throw some terms at you that may make your eyes glaze over slightly, but
+        trust me, you'll need to know it.
+      </p>
+      <p>
+        I'm going to direct you to this page from
+        <em>Interneting is Hard,</em>
+        because it explains it better than I could.
+      </p>
+      <a
+        href="https://internetingishard.netlify.app/html-and-css/hello-css/#the-cascade"
+        target="_blank"
+        class="button action">
+        the Cascade
+      </a>
+      <div class="callout note">
+        <div class="content">
+          <p><u>Worried about the cascade?</u></p>
+          <p>
+            If you think your styles will get messy and this feels overwhelming, I recommend just using an
+            <strong>external stylesheet</strong>
+            for now. That way, you know all of your CSS is in one place!
+          </p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2>Common CSS Properties</h2>
+      <h3>Color</h3>
+      <ul>
+        <li>
+          <strong>color:</strong>
+          Sets the text color of an element.
+        </li>
+        <li>
+          <strong>background-color:</strong>
+          Sets the background color of an element.
+        </li>
+        <li>
+          <strong>opacity:</strong>
+          Controls the transparency level of an element (0 to 1). I.e. 0.5 = 50% opacity.
+        </li>
+      </ul>
+      <h3>Spacing</h3>
+      <ul>
+        <li>
+          <strong>margin:</strong>
+          Sets the space outside an element's border. See box model above.
+        </li>
+        <li>
+          <strong>padding:</strong>
+          Sets the space inside an element's border, around its content. See box model above.
+        </li>
+      </ul>
+      <h3>Text</h3>
+      <ul>
+        <li>
+          <strong>font-size:</strong>
+          Sets the size of the text.
+        </li>
+        <li>
+          <strong>font-family:</strong>
+          Specifies the font used for text.
+        </li>
+        <li>
+          <strong>font-weight:</strong>
+          Sets the thickness or boldness of the text. Can be keywords ("bold", "normal") or numbers ("600", "400").
+        </li>
+        <li>
+          <strong>text-align:</strong>
+          Aligns text horizontally (left, right, center). Think microsoft word vibes.
+        </li>
+        <li>
+          <strong>line-height:</strong>
+          Sets the vertical spacing between lines of text. You can specify a number like 1.5, which is 1.5x the default
+          value. Or a specific number, like 16px. Setting it to 2 is like double space in Word.
+        </li>
+        <li>
+          <strong>text-decoration:</strong>
+          Adds decorative lines to text (underline, line-through, etc.)
+        </li>
+      </ul>
+      <h3>General</h3>
+      <ul>
+        <li>
+          <strong>width:</strong>
+          Sets the width of an element.
+        </li>
+        <li>
+          <strong>height:</strong>
+          Sets the height of an element.
+        </li>
+        <li>
+          <strong>border:</strong>
+          Sets the border around an element (width, style, color). See box model above.
+        </li>
+        <li>
+          <strong>border-radius:</strong>
+          Rounds the corners of an element.
+        </li>
+        <li>
+          <strong>overflow:</strong>
+          Controls what happens when content goes outside an element's box (visible, hidden, scroll, auto).
+        </li>
+      </ul>
+      <div class="callout note">
+        <div class="content">
+          <p><u>Remember!</u></p>
+          <p>
+            If you want to learn how to use each property and what values it accepts, you can always look it up on the
+            Mozilla Development Network.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Demo: Styling my Activity Page</h2>
+      <p>Let's open up the code and now I'll do a quick demo on how I like to style my activity page.</p>
+    </section>
+
+    <section class="prev-next">
+      <a href="/pages/html/activity.html" id="prev-page" class="button big prev">prev page</a>
+      <a href="/pages/css/activity.html" id="next-page" class="button big next">next page</a>
+    </section>
+  </body>
+  <script type="text/javascript">
+    function generateTOC() {
+      const container = document.querySelector('#toc');
+      if (!container) return;
+      const allHeadings = document.querySelectorAll('h2');
+      if (allHeadings.length < 2) return;
+      let output = '<b>Table of Contents:</b><ol>';
+      [...allHeadings].forEach((headingEl) => {
+        const title = headingEl.innerHTML;
+        const link =
+          headingEl.getAttribute('id') ||
+          encodeURI(
+            title
+              .replaceAll(' ', '-')
+              .replaceAll('#', '')
+              .replaceAll('&', '')
+              .replaceAll(/<[^>]*>?/gm, '')
+              .replaceAll('--', '-')
+          ).toLowerCase();
+        headingEl.setAttribute('id', link);
+        output += `<li><a href="#${link}">${title}</a></li>`;
+      });
+      container.innerHTML = output + '</ol>';
+    }
+    generateTOC();
+  </script>
+</html>

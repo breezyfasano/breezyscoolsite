@@ -184,6 +184,26 @@ th {
   }
 }
 
+.terms {
+  background-color: white;
+  color: var(--brown);
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 100%;
+  max-width: 560px;
+  margin: 0 auto;
+  h3 {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    padding-bottom: 1rem;
+  }
+  li:last-of-type {
+    padding-bottom: 0;
+  }
+}
+
 /* --------- Callout: General Code --------- */
 
 .callout {
@@ -195,6 +215,10 @@ th {
   width: 80%;
   margin: 32px auto;
   gap: 12px;
+  strong {
+    color: var(--brown);
+    font-style: italic;
+  }
 }
 
 .callout::before {

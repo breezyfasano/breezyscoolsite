@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creating your own Images</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jacquard+12&family=Pixelify+Sans:wght@400..700&family=Yarndings+12&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <a href="/">home</a>
+    <section>
+      <h1>Creating your own Images</h1>
+      <div id="toc"></div>
+    </section>
+    <section>
+      <!--TO DO-->
+      <h2>Tools</h2>
+      <h2>Formats & Saving</h2>
+    </section>
+    <section class="prev-next">
+      <a href="/pages/css/activity.html" id="prev-page" class="button big prev">prev page</a>
+      <a href="/pages/css/advanced.html" id="next-page" class="button big next">next page</a>
+    </section>
+  </body>
+  <script type="text/javascript">
+    function generateTOC() {
+      const container = document.querySelector('#toc');
+      if (!container) return;
+      const allHeadings = document.querySelectorAll('h2');
+      if (allHeadings.length < 2) return;
+      let output = '<b>Table of Contents:</b><ol>';
+      [...allHeadings].forEach((headingEl) => {
+        const title = headingEl.innerHTML;
+        const link =
+          headingEl.getAttribute('id') ||
+          encodeURI(
+            title
+              .replaceAll(' ', '-')
+              .replaceAll('#', '')
+              .replaceAll('&', '')
+              .replaceAll(/<[^>]*>?/gm, '')
+              .replaceAll('--', '-')
+          ).toLowerCase();
+        headingEl.setAttribute('id', link);
+        output += `<li><a href="#${link}">${title}</a></li>`;
+      });
+      container.innerHTML = output + '</ol>';
+    }
+    generateTOC();
+  </script>
+</html>
